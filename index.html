@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codemart - Minimarket Modern Anda</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* Menggunakan font Inter sebagai default */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Efek smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-teal-600">
+                <i class="fa-solid fa-cart-shopping mr-2"></i>Codemart
+            </a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#home" class="text-gray-600 hover:text-teal-600 transition duration-300">Beranda</a>
+                <a href="#produk" class="text-gray-600 hover:text-teal-600 transition duration-300">Produk</a>
+                <a href="#promo" class="text-gray-600 hover:text-teal-600 transition duration-300">Promo</a>
+                <a href="#kontak" class="text-gray-600 hover:text-teal-600 transition duration-300">Kontak</a>
+            </div>
+            <a href="#produk" class="hidden md:block bg-teal-600 text-white px-5 py-2 rounded-full hover:bg-teal-700 transition duration-300">
+                Mulai Belanja
+            </a>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="#home" class="block py-2 px-6 text-sm hover:bg-gray-100">Beranda</a>
+            <a href="#produk" class="block py-2 px-6 text-sm hover:bg-gray-100">Produk</a>
+            <a href="#promo" class="block py-2 px-6 text-sm hover:bg-gray-100">Promo</a>
+            <a href="#kontak" class="block py-2 px-6 text-sm hover:bg-gray-100">Kontak</a>
+            <div class="p-4">
+                <a href="#produk" class="w-full text-center block bg-teal-600 text-white px-5 py-2 rounded-full hover:bg-teal-700 transition duration-300">
+                    Mulai Belanja
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="bg-teal-50 py-20 lg:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-teal-800 mb-4">Selamat Datang di Codemart</h1>
+                <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-8">Solusi belanja harian Anda. Cepat, lengkap, dan hemat. Temukan semua kebutuhan Anda di sini dengan kualitas terbaik.</p>
+                <button onclick="document.getElementById('produk').scrollIntoView();" class="bg-teal-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-teal-700 transition transform hover:scale-105 duration-300">
+                    Lihat Produk Kami
+                </button>
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section id="produk" class="py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-2 text-gray-800">Produk Unggulan</h2>
+                <p class="text-center text-gray-600 mb-12">Produk pilihan yang paling disukai pelanggan kami.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Product Card 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/400x300/e2e8f0/333333?text=Beras+Organik" alt="Beras Organik" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-2">Beras Organik 5kg</h3>
+                            <p class="text-gray-600 text-sm mb-4">Beras pulen dan sehat, bebas pestisida.</p>
+                            <div class="text-xl font-bold text-teal-600">Rp 75.000</div>
+                        </div>
+                    </div>
+                    <!-- Product Card 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/400x300/e2e8f0/333333?text=Minyak+Goreng" alt="Minyak Goreng" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-2">Minyak Goreng 2L</h3>
+                            <p class="text-gray-600 text-sm mb-4">Minyak kelapa sawit berkualitas tinggi.</p>
+                            <div class="text-xl font-bold text-teal-600">Rp 35.000</div>
+                        </div>
+                    </div>
+                    <!-- Product Card 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/400x300/e2e8f0/333333?text=Telur+Ayam" alt="Telur Ayam" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-2">Telur Ayam Negeri (10 butir)</h3>
+                            <p class="text-gray-600 text-sm mb-4">Segar langsung dari peternakan pilihan.</p>
+                            <div class="text-xl font-bold text-teal-600">Rp 22.000</div>
+                        </div>
+                    </div>
+                    <!-- Product Card 4 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/400x300/e2e8f0/333333?text=Susu+UHT" alt="Susu UHT" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-2">Susu UHT Coklat 1L</h3>
+                            <p class="text-gray-600 text-sm mb-4">Susu segar dengan rasa coklat yang lezat.</p>
+                            <div class="text-xl font-bold text-teal-600">Rp 18.000</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promotion Section -->
+        <section id="promo" class="bg-white py-16">
+            <div class="container mx-auto px-6">
+                <div class="bg-teal-600 rounded-lg shadow-xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between">
+                    <div class="text-white text-center md:text-left mb-6 md:mb-0">
+                        <h2 class="text-3xl font-bold mb-2">Promo Spesial Minggu Ini!</h2>
+                        <p class="text-teal-100">Dapatkan diskon 20% untuk semua produk buah dan sayuran segar. Jangan sampai ketinggalan!</p>
+                    </div>
+                    <a href="#produk" class="bg-white text-teal-600 px-8 py-3 rounded-full font-bold hover:bg-gray-200 transition duration-300 whitespace-nowrap">
+                        Belanja Promo
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Us / Why Us Section -->
+        <section id="tentang" class="py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Kenapa Memilih Codemart?</h2>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="p-6">
+                        <div class="text-4xl text-teal-500 mb-4"><i class="fas fa-shipping-fast"></i></div>
+                        <h3 class="font-bold text-xl mb-2">Pengiriman Cepat</h3>
+                        <p class="text-gray-600">Kami mengantarkan pesanan Anda dengan cepat dan aman sampai ke depan pintu rumah.</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-4xl text-teal-500 mb-4"><i class="fas fa-leaf"></i></div>
+                        <h3 class="font-bold text-xl mb-2">Produk Segar</h3>
+                        <p class="text-gray-600">Kualitas dan kesegaran produk adalah prioritas utama kami untuk kepuasan Anda.</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-4xl text-teal-500 mb-4"><i class="fas fa-tags"></i></div>
+                        <h3 class="font-bold text-xl mb-2">Harga Terjangkau</h3>
+                        <p class="text-gray-600">Nikmati harga terbaik dan promo menarik setiap minggunya untuk belanja lebih hemat.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="kontak" class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Codemart</h3>
+                    <p class="text-gray-400">Minimarket modern yang menyediakan kebutuhan harian Anda dengan mudah dan cepat. Belanja jadi lebih menyenangkan.</p>
+                </div>
+                <!-- Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Tautan Cepat</h3>
+                    <ul>
+                        <li class="mb-2"><a href="#home" class="text-gray-400 hover:text-white">Beranda</a></li>
+                        <li class="mb-2"><a href="#produk" class="text-gray-400 hover:text-white">Produk</a></li>
+                        <li class="mb-2"><a href="#promo" class="text-gray-400 hover:text-white">Promo</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+                <!-- Contact & Social -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Hubungi Kami</h3>
+                    <p class="text-gray-400 mb-2"><i class="fa-solid fa-location-dot w-6"></i> Jl. Merdeka No. 1, Jakarta</p>
+                    <p class="text-gray-400 mb-4"><i class="fa-solid fa-envelope w-6"></i> halo@codemart.com</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                &copy; 2025 Codemart. Semua Hak Cipta Dilindungi.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript untuk fungsionalitas menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Menutup menu mobile ketika tautan di-klik
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+    </script>
+
+</body>
+</html>
