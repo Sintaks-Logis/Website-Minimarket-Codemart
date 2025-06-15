@@ -40,6 +40,9 @@ Selesai! Anda bisa langsung melihat dan berinteraksi dengan website.
 
 Jangan ragu untuk mengubah dan menyesuaikan kode ini untuk proyek Anda sendiri!
 
+# DEMO
+https://sintaks-logis.github.io/Website-Minimarket-Codemart/
+
 # 👤 Kreator & Dukungan
 Proyek ini dibuat oleh Sintaks-Logis. Anda bisa mengikuti dan memberikan dukungan melalui tautan berikut:
 
